@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2017零杯网页设计大赛报名官网</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'plug/bootstrap/dist/css/bootstrap.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/报名官网.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/报名官网.js' %}"></script>
+    <script>
+        $.ajaxSetup({
+    data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+});
+    </script>
+</head>
+<body>
+<div id="head_img"></div>
+<div id="ex_works">
+    <h1>去年零组优秀作品</h1>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <a class="thumbnail">
+                <img src="{% static 'img/formerWork1.png' %}" alt=""/>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <a class="thumbnail">
+                <img src="{% static 'img/formerWork2.png' %}" alt=""/>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12">
+            <a class="thumbnail">
+                <img src="{% static 'img/formerWork3.png' %}" alt=""/>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="time_arr">
+    <p class="p">时间安排</p>
+    <ul class="ul">
+        <li>11月3-11月22日：报名开始</li>
+        <li>11月12日（周日）：第一场讲座--国软204教室</li>
+        <li>11月19日（周日）：第二场讲座&公布大赛主题--20:00-21:30&nbsp;国软404教室</li>
+        <li>11月20号-12月2号（两周）：选手准备作品</li>
+        <li>12月2号24:00：初赛作品提交截止</li>
+    </ul>
+</div>
+<div id="prize">
+    <p class="p">参赛奖品</p>
+    <h4>零组（国际软件学院、计算机学院大一学生，其他院学生）</h4>
+    <ul class="ul">
+        <li>第一名（一组）：kindle fire 500元</li>
+        <li>第二名（两组）：罗技g402游戏鼠标 300元</li>
+        <li>第三名（三组）：蓝牙音箱 100元</li>
+        <li>&nbsp;</li>
+    </ul>
+    </ul>
+    <h4>壹组（国际软件学院、计算机学院非大一学生）</h4>
+    <ul class="ul">
+        <li>第一名（一组）：kindle fire 500元</li>
+        <li>第二名（两组）：罗技g402游戏鼠标 300元</li>
+        <li>第三名（三组）：蓝牙音箱 100元</li>
+    </ul>
+</div>
+<div id="regMessage">
+    <p class="p">报名信息</p>
+    <div id="reg-main">
+        <div id="form">
+            <form action="" id="regForm">
+                <div id="form-topLeft">
+                    <img src="{% static 'img/groupFlag.png' %}" alt=""/>
+                    <span>队伍名称</span>
+                    <input id="teamName" name="teamName" type="text"/>
+                    <br/>
+                    <img src="{% static 'img/chapter.png' %}" alt=""/>
+                    <span>队长姓名</span>
+                    <input id="leaderName" name="leaderName" type="text"/>
+                    <br/>
+                    <img src="{% static 'img/chapter.png' %}" alt=""/>
+                    <span>队长院系</span>
+                    <input id="leaderInstitute" name="leaderInstitute" type="text"/>
+                </div>
+                <div id="form-topRight">
+                    <img src="{% static 'img/group.png' %}" alt=""/>
+                    <span>组别</span>
+                <span id="groupType">
+                    <button id="button1" type="button" name="zero" value="零组">零组</button>
+                    <button id="button2" type="button" name="one" value="壹组">壹组</button>
+                </span>
+                    <br/>
+                    <img src="{% static 'img/chapter.png' %}" alt=""/>
+                    <span>队长学号</span>
+                    <input id="leaderId" name="leaderId" type="text"/>
+                    <br/>
+                    <img src="{% static 'img/chapter.png' %}" alt=""/>
+                    <span>队长联系方式</span>
+                    <br/>
+                    <img src="{% static 'img/chapter.png' %}" alt=""/>
+                    <input id="leaderContact" name="leaderContact" type="text"/>
+                </div>
+                <div id="form-bottom">
+                    <img src="{% static 'img/munmber.png' %}" alt=""/>
+                    <span>队员姓名</span>
+                    <input id="teamerName" placeholder="队员姓名（按空格分隔，如：爱蜜莉雅 凤凰院凶真 夜刀神十香）注：单人参赛请填写无，下同" name="teamerName" type="text" value=" "              
+                    onfocus='if(this.value==" "){this.value="";};' 
+                    onblur='if(this.value==""){this.value=" ";};' />
+                    <br/>
+                    <img src="{% static 'img/groupFlag.png' %}" alt=""/>
+                    <span>队员学号</span>
+                    <input id="teamerId" placeholder="队员学号（按之前的姓名顺序输入并按空格分隔，如：123 545 121）" name="teamerId" type="text" value=" "
+                    onfocus='if(this.value==" "){this.value="";};'
+                    onblur='if(this.value==""){this.value=" ";};' />
+                    <br/>
+                    <img src="{% static 'img/groupFlag.png' %}" alt=""/>
+                    <span>队员院系</span>
+                    <input id="teamInstitute" placeholder="队员院系（按之前的姓名顺序输入并按空格分隔,如：计算机学院 国际软件学院 测绘学院)" name="teamInstitute" type="text" value=" "
+                    onfocus='if(this.value==" "){this.value="";};'
+                    onblur='if(this.value==""){this.value=" ";};' />
+                </div>
+                <button id="submit" type="button">提交</button>
+            </form>
+        </div>
+        <div id="text">
+            1.本次大赛以个人或小组的形式参赛，小组成员最多不超过4人（注：获奖后奖状及奖品每队只有一份）<br/>
+            2.报名时务必填好小组成员的详细信息资料 <br/>
+            3.参赛小组务必在作品截止之前通过邮箱或官网将作品提交至相关人员（具体邮箱地址会在大赛官网上公布，请参赛选手留意）<br/>
+            4.零杯qq群：566701469
+        </div>
+    </div>
+</div>
+<div id="regMessageM">
+    <p class="p">报名信息</p>
+    <div id="textM">
+        <p>1.本次大赛以个人或小组的形式参赛，小组成员最多不超过4人（注：获奖后奖状及奖品每队只有一份）</p>
+        <p>2.报名时务必填好小组成员的详细信息资料</p>
+        <p>3.参赛小组务必在作品截止之前通过邮箱或官网将作品提交至相关人员（具体邮箱地址会在大赛官网上公布，请参赛选手留意）</p>
+        <p>4.零杯qq群：566701469</p>
+    </div>
+    <div id="formM">
+        <form action="" id="regFormM">
+            <span>队伍名称</span>
+            <br/>
+            <input id="teamNameM" name="teamNameM" type="text"/>
+            <br/>
+            <span>组别</span>
+    <span id="groupTypeM">
+        <button id="button1M" type="button" name="zero" value="零组">零组</button>
+        <button id="button2M" type="button" name="one" value="壹组">壹组</button>
+    </span>
+            <br/>
+            <span>队长姓名</span>
+            <br/>
+            <input id="leaderNameM" name="leaderNameM" type="text"/>
+            <br/>
+            <span>队长学号</span>
+            <br/>
+            <input id="leaderIdM" name="leaderIdM" type="text"/>
+            <br/>
+            <span>队长院系</span>
+            <br/>
+            <input id="leaderInstituteM" name="leaderInstituteM" type="text"/>
+            <br/>
+            <span>队长联系方式</span>
+            <br/>
+            <input id="leaderContactM" name="leaderContactM" type="text"/>
+            <br/>
+            <span>队员姓名(单人参赛请填写无，下同)</span>
+            <br/>
+            <input id="teamerNameM" placeholder="队员姓名（按空格分隔，如：爱蜜莉雅 凤凰院凶真 夜刀神十香）" name="teamerNameM" type="text" value=" "              
+                    onfocus='if(this.value==" "){this.value="";};' 
+                    onblur='if(this.value==""){this.value=" ";};'/>
+            <br/>
+            <span>队员学号</span>
+            <br/>
+            <input id="teamerIdM" placeholder="队员学号（按之前的姓名顺序输入并按空格分隔，如：123 545 121）" name="teamerIdM" type="text" value=" "              
+                    onfocus='if(this.value==" "){this.value="";};' 
+                    onblur='if(this.value==""){this.value=" ";};'/>
+            <br/>
+            <span>队员院系</span>
+            <br/>
+            <input id="teamInstituteM" placeholder="队员院系（按之前的姓名顺序输入并按空格分隔,如：计算机学院 国际软件学院 测绘学院)" name="teamInstituteM" type="text" value=" "              
+                    onfocus='if(this.value==" "){this.value="";};' 
+                    onblur='if(this.value==""){this.value=" ";};'/>
+            <br/>
+            <button id="submitM" type="button">提交</button>
+        </form>
+    </div>
+</div>
+<div id="footer">
+    <div id="footer-left">
+        <ul class="ul">
+            <li>联合承办</li>
+            <li>计算机学院网络部</li>
+            <li>国际软件学院网络学习部</li>
+            <li>武汉大学天行工作室</li>
+        </ul>
+        <img src="{% static 'img/2dcode.png' %}" alt=""/>
+    </div>
+    <div id="footer-right">
+        <h4>Copyright &copy 2017 &nbsp;Skyparade Studio</h4>
+    </div>
+</div>
+</body>
+</html>

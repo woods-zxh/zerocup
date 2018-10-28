@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零杯——为你喜欢的作品投票</title>
+    <script type="text/javascript">
+        var List = {{ content|safe }};
+		alert(List);
+    </script>
+</head>
+<body>
+    {% if user.is_authenticated %}
+       <p>{{ user.first_name }}，您已登录！！</p> <br />
+        <a href="{% url 'logout' %}">退出登录</a>
+        <p>是否已投票：{{ is_vote }}</p>
+    {% else %}
+        <a href="{% url 'Judgelogin' %}">请登录</a>
+
+    {% endif %}
+</body>
+</html>

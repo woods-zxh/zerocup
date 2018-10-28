@@ -1,0 +1,11 @@
+表单中队伍名称重复的验证ajax
+表单中队长学号的验证ajax
+表单值打包提交ajax
+输出提交成功
+
+teamName；
+
+在mysql中创建一个表
+接受post过来的teamName值
+在mysql查询teamName有没有相同的值，没有就发送false
+有就发送true

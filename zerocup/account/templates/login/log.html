@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var List = {{ content|safe }};
+		alert(List);
+    </script>
+</head>
+<body>
+ <img src="/media/yzm.jpg"></a>
+    <form action="{% url 'Judgelogin' %}" method="post">
+        {% csrf_token %}
+
+        <input name="username" type="text"/>
+        <input name="password" type="text"/>
+        <input name="yzm" type="text"/>
+        <input type="hidden" name="yzm_cookie" value="{{ yzm_cookie }}" />
+        <input type="submit" />
+
+
+    </form>
+</body>
+</html>

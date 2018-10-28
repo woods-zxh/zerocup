@@ -1,0 +1,471 @@
+::-webkit-input-placeholder { /* WebKit browsers */    /*11.1*/
+    font-size:1vw;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size:1vw;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size:1vw;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size:1vw;
+}
+body{
+    font-family: PingFangTC-Regular!important;
+}
+
+input{
+    color: #000!important;
+}
+
+.p{
+    padding-top: 2.17vw;
+    font-size: 3vw;
+    padding-bottom: 1.17vw;
+    margin-bottom: 0;
+    color: rgba(51,51,51,0.8);
+}
+.ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.6;
+    font-size: 1.2vw;
+}
+#head_img{
+    width: 100%;
+    height: 39vw;
+    background-image: url("../img/theme.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#ex_works{
+    color: rgba(51,51,51,0.8);
+    padding-left: 6vw;
+    padding-right: 6vw;
+    margin-bottom: 4vw;
+}
+#ex_works img{
+    width: 30vw;
+}
+
+#ex_works h1{
+    font-size: 3vw;
+    margin-top: 2.1vw;
+    margin-bottom: 1.7vw;
+}
+
+#ex_works .thumbnail{
+    border: 0;
+    margin-bottom: 0;
+}
+
+#time_arr{
+    color: rgba(93, 93, 93, 1);
+    padding-left: 6vw;
+    background-color: rgba(238,238,238,1);
+    padding-bottom: 2.33vw;
+}
+
+#prize{
+    padding-left: 6vw;
+    background-color: rgba(255,177,27,1);
+    padding-bottom: 4vw;
+}
+
+#prize h4{
+    font-size: 1.83vw;
+    color: rgba(255, 255, 255, .8);
+}
+
+#prize h4:nth-child(2){
+    margin-top: 2vw;
+}
+
+#regMessage{
+    padding-left: 6vw;
+    color: black;
+    background-color: #b9c733;
+    font-size: 1.83vw;
+    padding-bottom: 2.33vw;
+    display: block;
+}
+
+#regMessageM{
+    padding-left: 10vw;
+    color: black;
+    background-color: #b9c733;
+    font-size: 1.83vw;
+    padding-bottom: 2.33vw;
+    display: none;
+}
+
+#regMessageM p{
+    color:rgba(255,255,255,1)!important;
+}
+
+#regMessage input{
+    padding-left: 1vw;
+    background: rgba(255,255,255,0.34);
+    border: 1px solid #FFFFFF;
+    border-radius: 99px;
+    height: 2.53vw;
+    outline: none;
+    position: relative;
+    top: 7px;
+
+}
+
+#regMessageM input{
+    padding-left: 1vw;
+    background: rgba(255,255,255,0.34);
+    border: 2px solid #FFFFFF;
+    border-radius: 99px;
+    height: 8.1vw;
+    outline: none;
+    width: 78vw;
+    margin-top: 4px;
+}
+
+#regMessage img{
+    width: 2.67vw;
+}
+
+#regMessage span{
+    position: relative;
+    top: 11px;
+    padding-right: 8px;
+}
+
+#form{
+    float: left;
+    margin-right: 6vw;
+}
+
+#form-topLeft{
+    float:left;
+    width: 29vw;
+    height: 16vw;
+}
+
+#form-topLeft input{
+    width: 13vw;
+}
+
+#form-topLeft img:nth-child(9){
+    opacity: 0;
+}
+
+#teamName{
+    margin-bottom: 2.67vw;
+}
+
+#leaderName{
+    margin-bottom: 1.5vw;
+}
+
+#form-topRight img{
+    width:3.6vw;
+    opacity: 0;
+}
+
+#form-topRight img:first-child{
+    opacity: 1;
+}
+
+#form-topRight span:nth-child(2){
+    margin-right: 2.6vw;
+}
+
+#groupType{
+    width: 11.7vw;
+    height: 2.53vw;
+}
+
+#groupType button{
+    font-size: 75%;
+    width: 5.8vw;
+    height: 2.53vw;
+    border:0;
+    border-radius: 99px;
+    outline: 0;
+}
+
+#button1{
+    border-bottom-right-radius: 0!important;
+    border-top-right-radius: 0!important;
+    color: rgba(92,101,104,1);
+    background-color: #ffffff;
+}
+
+#button2{
+    position:relative;
+    right: .6vw;
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius:0!important;
+    color: rgba(92,101,104,1);
+    background-color: #ffffff;
+}
+
+#groupTypeM button{
+    margin-bottom: 3vw;
+    font-size: 110%;
+    width: 18.5vw;
+    height: 8.1vw;
+    border:0;
+    border-radius: 99px;
+    outline: 0;
+}
+
+#button1M{
+    border-bottom-right-radius: 0!important;
+    border-top-right-radius: 0!important;
+    color: rgba(92,101,104,1);
+    background-color: #ffffff;
+}
+
+#button2M{
+    position:relative;
+    right: 1.6vw;
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius:0!important;
+    color: rgba(92,101,104,1);
+    background-color: #ffffff;
+}
+
+.clicked{
+    color: rgba(137, 146, 149, 1)!important;
+    background-color: rgba(92,101,104,1)!important;
+}
+
+#leaderId{
+    margin-bottom: .9vw;
+    margin-top: 2.47vw;
+    width: 15.2vw;
+}
+
+#leaderContact{
+    position: relative !important;
+    width: 23.7vw;
+}
+
+#form-bottom img{
+    opacity: 0;
+    width: 3vw;
+}
+
+#form-bottom img:nth-child(1){
+    opacity: 1;
+}
+
+#form-bottom input{
+    width: 44.8vw;
+}
+
+#teamerName{
+    margin-top: .6vw;
+    margin-bottom: 1.5vw;
+}
+
+#teamerId{
+    margin-bottom: 1.5vw;
+}
+
+#submit{
+    background-color: rgba(255,255,255,0.9);
+    color: rgba(124,134,33,1);
+    width: 13.7vw;
+    height: 3.68vw;
+    border: 0;
+    border-radius: 99px;
+    outline: 0;
+    margin-left: 22.4vw;
+    margin-top: 1.17vw;
+}
+
+#submitM{
+    font-size: 5.8vw;
+    /* margin: 0 auto; */
+    background-color: rgba(255,255,255,0.9);
+    color: rgba(124,134,33,1);
+    width: 35.7vw;
+    height: 10.98vw;
+    border: 0;
+    border-radius: 99px;
+    outline: 0;
+    /* margin-left: 24vw; */
+    /* margin-top: 1.17vw; */
+    /* margin-bottom: 2vw; */
+    margin: 2.17vw 0 3vw 20vw;
+}
+
+#text{
+    height: 34vw;
+    margin-right: 10.2vw;
+    font-size: 1.52vw;
+}
+
+#textM{
+    margin-bottom: 4vw;
+    text-indent: 8vw;
+    font-size: 4vw;
+    width: 80vw;
+    letter-spacing: .3vw;
+    font-weight: 100;
+}
+
+#textM p{
+    margin:0;
+}
+
+#formM{
+    font-size: 4.4vw;
+}
+
+#formM input{
+    margin-bottom: 3vw;
+    margin-top: 4px;
+    height: 8.1vw;
+    border: 2px solid #FFFFFF;
+}
+
+#footer{
+    background-color: rgba(52,54,55,1);
+    padding-top: 5vw;
+    padding-left: 6vw;
+    color: rgba(255, 255, 255, 1);
+    padding-bottom: 6vw;
+}
+
+#footer img{
+    margin-top: 1.67vw;
+    width: 8.8vw;
+}
+
+#footer-left{
+    display: inline-block;
+    width: 46.8vw;
+    border-right: 1px solid rgba(255,255,255,.5);
+}
+
+#footer-right{
+    display: inline-block;
+    position: relative;
+    top: 4.4vw;
+}
+
+.clear{
+    clear: both;
+}
+
+@media(max-width: 992px){
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        font-size:2.5vw;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        font-size:2.5vw;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        font-size:2.5vw;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        font-size:2.5vw;
+    }
+    #ex_works img{
+        width: 80vw;
+    }
+    #ex_works{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    #ex_works h1{
+        font-size: 6vw;
+        margin-top: 4.2vw;
+        margin-bottom: 3.4vw;
+    }
+    #time_arr{
+        padding-left: 10vw;
+        padding-bottom: 7vw;
+    }
+    #time_arr p{
+        padding-bottom: 4.34vw;
+    }
+    #prize{
+        padding-left: 10vw;
+        padding-right: 10vw;
+        background-color: rgba(255,177,27,1);
+        padding-bottom: 8vw;
+    }
+
+    .ul{
+        list-style: none;
+        color: rgba(93,93,93,1);
+        padding: 0;
+        margin: 0;
+        font-weight: 400;
+        line-height: 1.4;
+        font-size: 3.7vw;
+    }
+
+    .p{
+        padding-top: 4.34vw;
+        font-weight: 400;
+        font-size: 6vw;
+        padding-bottom: 2.34vw;
+    }
+
+    .clicked{
+        color: rgba(137, 146, 149, 1)!important;
+        background-color: rgba(92,101,104,1)!important;
+    }
+
+    #prize h4{
+        font-size: 4.56vw;
+        line-height: 7vw;
+        color: rgba(255, 255, 255, 1);
+        letter-spacing: .5vw;
+        margin-top: 4vw;
+        margin-bottom: 3vw;
+    }
+
+    #footer{
+        padding-left: 10vw;
+        padding-top: 12vw;
+        padding-bottom: 7vw;
+    }
+    
+    #footer ul{
+        color: rgba(255,255,255,.5)!important
+    }
+
+    #footer img{
+        margin-top: 4.34vw;
+        width: 24.6vw;
+    }
+    #head_img{
+        height: 60vw;
+        background-position: center;
+        background-image: url("../img/themeMobile.png");
+    }
+    #regMessage img{
+        display: none;
+    }
+
+    #regMessageM{
+        display: block;
+    }
+    #regMessage{
+        display: none;
+    }
+    #footer-right{
+        top: 13vw;
+    }
+    #footer-right h6{
+        font-size: 22px;
+        color: rgba(255,255,255,.6);
+    }
+    #regMessageM input{
+        padding-left: 2.5vw;
+    }
+}

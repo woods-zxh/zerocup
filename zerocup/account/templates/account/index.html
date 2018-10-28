@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零杯报名信息查看</title>
+</head>
+<body>
+   <a href="{% url 'csv' %}"><h3>点我就可以下报名信息表哟</h3></a>
+   <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----bug全是我的锅&nbsp;&nbsp;/(ㄒoㄒ)/~~</h4>
+      {% for x in memb %}
+      <p>------------------------</p>
+          第{{ x.team.teamnum     }}队 <br/>
+     队伍名：{{ x.team.teamname }}  <br />
+     队伍组别：{{ x.team.teamtype }}     <br />
+     
+     队长姓名：{{ x.team.cname }}  <br />
+     队长学号：{{ x.team.cstunum }}<br />
+     队长学院：{{ x.team.cschool }}<br />
+     队长联系方式：{{ x.team.clianxi }}<br />
+     队员姓名：{{ x.othermember }}<br />
+     队员学号：{{ x.otherstunum }}<br />
+     队员学院：{{ x.otherschool }}<br />
+     报名时间：{{ x.created | date:"m-d , H:i"  }} <br />
+   {% endfor %}
+
+
+</body>
+</html>
