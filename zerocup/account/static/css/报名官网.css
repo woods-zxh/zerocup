@@ -40,27 +40,33 @@ input{
     background-repeat: no-repeat;
     background-size:cover;
 }
-#ex_works{
+.ex_works{
     color: rgba(51,51,51,0.8);
     padding-left: 6vw;
     padding-right: 6vw;
     margin-bottom: 4vw;
 }
-#ex_works img{
+.ex_works img{
     width: 30vw;
 }
 
-#ex_works h1{
+.ex_works h1{
     font-size: 3vw;
     margin-top: 2.1vw;
     margin-bottom: 1.7vw;
+    text-align:center;
 }
 
-#ex_works .thumbnail{
+.ex_works .thumbnail{
     border: 0;
     margin-bottom: 0;
 }
-
+#works{
+    display:block;
+}
+#worksM{
+    display:none;
+}
 #time_arr{
     color: rgba(93, 93, 93, 1);
     padding-left: 6vw;
@@ -70,7 +76,7 @@ input{
 
 #prize{
     padding-left: 6vw;
-    background-color: rgba(255,177,27,1);
+    background-color: #92C5E7 ;
     padding-bottom: 4vw;
 }
 
@@ -85,8 +91,8 @@ input{
 
 #regMessage{
     padding-left: 6vw;
-    color: black;
-    background-color: #b9c733;
+    color: white;
+    background-color: #5DA2D5 ;
     font-size: 1.83vw;
     padding-bottom: 2.33vw;
     display: block;
@@ -95,12 +101,14 @@ input{
 #regMessageM{
     padding-left: 10vw;
     color: black;
-    background-color: #b9c733;
+    background-color: #5DA2D5;
     font-size: 1.83vw;
     padding-bottom: 2.33vw;
     display: none;
 }
-
+#regMessage p{
+    color:rgba(255,255,255,1);
+}
 #regMessageM p{
     color:rgba(255,255,255,1)!important;
 }
@@ -162,14 +170,17 @@ input{
 }
 
 #leaderName{
-    margin-bottom: 1.5vw;
+    margin-bottom: 2.67vw;
 }
 
 #form-topRight img{
     width:3.6vw;
     opacity: 0;
 }
-
+#form-topRight input{
+    width: 13vw;
+    margin-bottom: 2.67vw;
+}
 #form-topRight img:first-child{
     opacity: 1;
 }
@@ -185,7 +196,7 @@ input{
 
 #groupType button{
     font-size: 75%;
-    width: 5.8vw;
+    width: 6.5vw;
     height: 2.53vw;
     border:0;
     border-radius: 99px;
@@ -195,8 +206,8 @@ input{
 #button1{
     border-bottom-right-radius: 0!important;
     border-top-right-radius: 0!important;
-    color: rgba(92,101,104,1);
-    background-color: #ffffff;
+    color: white;
+    background-color: black;
 }
 
 #button2{
@@ -221,8 +232,8 @@ input{
 #button1M{
     border-bottom-right-radius: 0!important;
     border-top-right-radius: 0!important;
-    color: rgba(92,101,104,1);
-    background-color: #ffffff;
+    color:white;
+    background-color: black;
 }
 
 #button2M{
@@ -240,7 +251,7 @@ input{
 }
 
 #leaderId{
-    margin-bottom: .9vw;
+    margin-bottom: 1.5vw;
     margin-top: 2.47vw;
     width: 15.2vw;
 }
@@ -249,10 +260,13 @@ input{
     position: relative !important;
     width: 23.7vw;
 }
-
+#form-bottom{
+    clear:left;
+}
 #form-bottom img{
     opacity: 0;
     width: 3vw;
+
 }
 
 #form-bottom img:nth-child(1){
@@ -260,7 +274,7 @@ input{
 }
 
 #form-bottom input{
-    width: 44.8vw;
+    width: 39vw;
 }
 
 #teamerName{
@@ -273,45 +287,47 @@ input{
 }
 
 #submit{
-    background-color: rgba(255,255,255,0.9);
-    color: rgba(124,134,33,1);
-    width: 13.7vw;
-    height: 3.68vw;
+    background-color: rgba(255,255,255,0.8);
+    color: #5DA2D5;
+    width: 25vw;
+    height: 2.9vw;
     border: 0;
     border-radius: 99px;
     outline: 0;
-    margin-left: 22.4vw;
+    margin-left:25.7vw;
     margin-top: 1.17vw;
 }
 
 #submitM{
     font-size: 5.8vw;
     /* margin: 0 auto; */
-    background-color: rgba(255,255,255,0.9);
-    color: rgba(124,134,33,1);
-    width: 35.7vw;
-    height: 10.98vw;
+    background-color:rgba(255,255,255,0.8) ;
+    color: #5DA2D5;
+    width: 40vw;
+    height: 8vw;
     border: 0;
     border-radius: 99px;
     outline: 0;
     /* margin-left: 24vw; */
     /* margin-top: 1.17vw; */
     /* margin-bottom: 2vw; */
-    margin: 2.17vw 0 3vw 20vw;
+    margin-top: 2.17vw ;
+    margin-bottom:3vw;
+    margin-left:20vw;
 }
 
 #text{
     height: 34vw;
     margin-right: 10.2vw;
-    font-size: 1.52vw;
+    font-size: 1.22vw;
+    line-height:2.745vw;
 }
 
 #textM{
-    margin-bottom: 4vw;
+    margin-bottom: 8vw;
     text-indent: 8vw;
     font-size: 4vw;
     width: 80vw;
-    letter-spacing: .3vw;
     font-weight: 100;
 }
 
@@ -372,17 +388,23 @@ input{
     :-ms-input-placeholder { /* Internet Explorer 10+ */
         font-size:2.5vw;
     }
-    #ex_works img{
+    .ex_works img{
         width: 80vw;
     }
-    #ex_works{
+    .ex_works{
         padding-left: 10vw;
         padding-right: 10vw;
     }
-    #ex_works h1{
+    .ex_works h1{
         font-size: 6vw;
         margin-top: 4.2vw;
         margin-bottom: 3.4vw;
+    }
+    #works{
+        display:none;
+    }
+    #worksM{
+        display:block;
     }
     #time_arr{
         padding-left: 10vw;
@@ -394,7 +416,7 @@ input{
     #prize{
         padding-left: 10vw;
         padding-right: 10vw;
-        background-color: rgba(255,177,27,1);
+        background-color: #92c5E7;
         padding-bottom: 8vw;
     }
 
@@ -446,10 +468,10 @@ input{
     #head_img{
         height: 60vw;
         background-position: center;
-        background-image: url("../img/themeMobile.png");
+        background-image: url("../img/theme.png");
     }
     #regMessage img{
-        display: none;
+        display: block;
     }
 
     #regMessageM{
@@ -458,14 +480,20 @@ input{
     #regMessage{
         display: none;
     }
+    #groupType button{
+        font-size: 75%;
+        width: 5.8vw;
+        height: 2.53vw;
+        border:0;
+        border-radius: 99px;
+        outline: 0;
+    }
     #footer-right{
         top: 13vw;
     }
-    #footer-right h6{
-        font-size: 22px;
+    #footer-right h4{
+        font-size:22px;
         color: rgba(255,255,255,.6);
     }
-    #regMessageM input{
-        padding-left: 2.5vw;
-    }
+
 }

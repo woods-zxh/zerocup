@@ -1,5 +1,6 @@
 /**
  * Created by HP on 2017/10/30.
+ * Edited by MY on 2018/10/29
  */
 jQuery(document).ajaxSend(function(event, xhr, settings) {
     function getCookie(name) {
@@ -127,7 +128,7 @@ window.onload = function(){
         document.getElementById("submit").style.boxShadow = "0 3px 3px rgba(0,0,0,.5) inset";
         setTimeout(function(){
             var myDate = new Date();
-            if(myDate.getTime()>Date.parse(new Date("2019/11/23 00:00:00"))){
+            if(myDate.getTime()>Date.parse(new Date("2018/12/2 00:00:00"))){
                 alert("报名通道已关闭！");
                 document.getElementById("submit").style.removeProperty("box-shadow");
                 return;
