@@ -176,7 +176,7 @@ window.onload = function(){
         document.getElementById("submitM").style.boxShadow = "0 6px 6px rgba(0,0,0,.5) inset";
         setTimeout(function(){
             var myDate = new Date();
-            if(myDate.getTime()>Date.parse(new Date("2017/11/23 00:00:00"))){
+            if(myDate.getTime()>Date.parse(new Date("2018/12/2 00:00:00"))){
                 alert("报名通道已关闭！");
                 document.getElementById("submitM").style.boxShadow="";
                 return;
