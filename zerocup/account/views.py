@@ -1,11 +1,13 @@
 # -*- coding:utf-8 -*-
-from .models import TeamInfo, Member
+from .models import TeamInfo, Member,Files
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse, Http404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from django.utils import timezone
+
 #from django.views.decorators.csrf import csrf_exempt
 import json
 import csv, codecs
@@ -136,5 +138,36 @@ def build_csv(request):
                  x.team.clianxi, x.othermember, x.otherstunum, x.otherschool, x.created]
         writer.writerow(listx)
     return response
+
+#上传文件
+def submit(request):
+    if request.method == 'POST':
+        teamName = request.POST["teamName"]
+        if request.FILES.get("file"):
+            file = request.FILES["file"]
+            print("asdsada")
+            if(Files.objects.filter(teamName = teamName)):
+
+                file1 = Files.objects.get(teamName=teamName)
+                file1.delete()
+                Files.objects.create(file=file, teamName=teamName, fileName=file.name)
+            else:
+                Files.objects.create(file = file,teamName = teamName,fileName = file.name)
+        return render(request, 'account/submit_success.html')
+    else:
+        return render(request, 'account/submit.html')
+#
+# #下载文件
+def download(request):
+    try:
+        files = Files.objects.all()
+        a = 0
+        for file in files:
+            a =a +1
+
+    except:
+        pass
+    return render(request, 'account/files.html',{"files":files,"a":a})
+
 
 

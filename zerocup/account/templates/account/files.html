@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Files</title>
+</head>
+<body>
+<h2>一共有{{a}}个文件</h2>
+
+{%for f in files %}
+    <span>队伍名称：{{f.teamName}}</span>
+    <br>
+    <a  href="/media/{{f.fileName}}">{{f.fileName}}(点击下载)</a>
+    <br>
+    <span>上传时间:{{f.created}}</span>
+    <br>
+    <span>--------------------------------------------------</span>
+<br>
+<br>
+
+{% endfor %}
+</body>
+</html>

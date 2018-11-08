@@ -28,3 +28,8 @@ class Member(models.Model):
     def __str__(self):
         return self.team.teamname
 
+class Files(models.Model):
+    file = models.FileField(default=timezone.now)
+    fileName = models.CharField(max_length=64, blank=True)
+    created = models.DateTimeField(default=timezone.now)
+    teamName = models.CharField(max_length=64, blank=True)

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2018零杯网页设计大赛报名官网</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'plug/bootstrap/dist/css/bootstrap.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/upload.js' %}"></script>
+
+    <script>
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+    });
+</script>
+</head>
+<body>
+<div id="head_img"></div>
+<div class="ex_works" id="worksM">
+    <h1>去年零组优秀作品</h1>
+    <div class="row">
+        <div class="col-xs-6">
+            <a class="thumbnail">
+                <img src="{% static 'img/Group.png' %}" alt=""/>
+            </a>
+        </div>
+        <div class="col-xs-6">
+            <a class="thumbnail">
+                <img src="{% static 'img/Group 2.png' %}" alt=""/>
+            </a>
+        </div>
+    </div>
+    <h1>去年壹组优秀作品</h1>
+    <div class="row">
+        <div class="col-xs-6">
+            <a class="thumbnail">
+                <img src="{% static 'img/Group 3.png' %}" alt=""/>
+            </a>
+        </div>
+        <div class="col-xs-6">
+            <a class="thumbnail">
+                <img src="{% static 'img/Group 4.png' %}" alt=""/>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="ex_works" id="works">
+    <h1>去年优秀作品</h1>
+    <div class="row">
+        <div class="col-lg-4 col-md-4">
+            <a class="thumbnail">
+                <img src="{% static 'img/Group.png' %}" alt=""/>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <a class="thumbnail">
+                <img src="{% static 'img/Group 3.png' %}" alt=""/>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <a class="thumbnail">
+                <img src="{% static 'img/Group 4.png' %}" alt=""/>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="time_arr">
+    <p class="p">时间安排</p>
+    <ul class="ul">
+        <li>11月3日-11月25日：报名开始</li>
+		<li>11月11日晚上18:30（青楼532教室）: 零杯讲座</li>
+        <li>11月10日-11月29日（三周）：选手准备作品</li>
+        <li>11月29日：初赛作品提交截止</li>
+		<li>12月7日：决赛作品提交截止</li>
+		<li>12月9日：决赛答辩</li>
+    </ul>
+</div>
+<div id="prize">
+    <p class="p">参赛奖品</p>
+     <h4>零组（计算机学院，国家网络安全学院大一学生，其他院学生）</h4>
+    <ul class="ul">
+         <li>第一名（一组）：kindle电子书阅读器</li>
+        <li>第二名（两组）：罗技无线蓝牙键盘</li>
+        <li>第三名（三组）：蓝牙音箱</li>
+        <li>优秀奖（五组）：无奖品，奖状表彰</li>
+    </ul>
+    </ul>
+    <h4>壹组（计算机学院，国家网络安全学院非大一学生）</h4>
+    <ul class="ul">
+         <li>第一名（一组）：kindle电子书阅读器</li>
+        <li>第二名（两组）：罗技无线蓝牙键盘</li>
+        <li>第三名（三组）：蓝牙音箱</li>
+        <li>优秀奖（五组）：无奖品，奖状表彰</li>
+    </ul>
+</div>
+<div id="regMessage">
+    <p class="p">作品上传</p>
+    <div id="reg-main">
+        <div id="form">
+            <form action="/submit/" id="regForm" enctype="multipart/form-data" method="post">
+                <div id="form-topLeft">
+                    <span>队伍名称</span>
+                    <input id="teamName" name="teamName" type="text"/>
+                    <br/>
+                   点击此处上传作品
+                        <input type="file" name="file" >
+
+                    <!--<a href="javascript:;" class="file">-->
+                        <input type="submit" value="提交">
+                </div>
+                <br/>
+            </form>
+        </div>
+        <div id="text">
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div id="footer-left">
+        <ul class="ul">
+            <li>联合承办</li>
+            <li>武汉大学计算机学院学习部</li>
+            <li>武汉大学计算机学院网络部</li>
+            <li>微软俱乐部</li>
+            <li>天行工作室</li>
+        </ul>
+		<br/>
+		<br/>
+		<h4>零杯咨询群二维码</h4>
+        <img src="{% static 'img/2dcode.png' %}" alt=""/>
+		
+    </div>
+    <div id="footer-right">
+        <h4>Copyright &copy 2018 &nbsp;Skyparade Studio</h4>
+    </div>
+</div>
+</body>
+</html>
