@@ -142,18 +142,23 @@ def build_csv(request):
 #上传文件
 def submit(request):
     if request.method == 'POST':
-        teamName = request.POST["teamName"]
-        if request.FILES.get("file"):
-            file = request.FILES["file"]
-            print("asdsada")
-            if(Files.objects.filter(teamName = teamName)):
+        if request.POST["teamName"]:
+            teamName = request.POST["teamName"]
+            if request.FILES.get("file"):
+                file = request.FILES["file"]
+                print("asdsada")
+                if(Files.objects.filter(teamName = teamName)):
 
-                file1 = Files.objects.get(teamName=teamName)
-                file1.delete()
-                Files.objects.create(file=file, teamName=teamName, fileName=file.name)
+                    file1 = Files.objects.get(teamName=teamName)
+                    file1.delete()
+                    Files.objects.create(file=file, teamName=teamName, fileName=file.name)
+                else:
+                    Files.objects.create(file = file,teamName = teamName,fileName = file.name)
+                return render(request, 'account/submit_success.html')
             else:
-                Files.objects.create(file = file,teamName = teamName,fileName = file.name)
-        return render(request, 'account/submit_success.html')
+                return HttpResponse("提交失败，未选择文件")
+        else:
+            return HttpResponse("提交失败，未填写对名")
     else:
         return render(request, 'account/submit.html')
 #
